@@ -1,0 +1,44 @@
+body {
+	background: rgb(180, 185, 194);
+}
+
+hr {
+	border-color: rgb(87, 85, 79);
+}
+
+#title {
+	text-shadow: 1px 1px 0 white, 
+                2px 2px 0 white;
+	font-family: 'Russo One', sans-serif;
+	text-align: center;
+	font-size: 300%;
+}
+
+#mainContent {
+	position: relative;
+	display: inline;
+	bottom: 40%;
+}
+
+#linkPics {
+	margin-left: 290px;
+	margin-top: 50px;
+}
+
+#slotsPic {
+	height: 450px;
+	margin-right: 40px;
+}
+
+#blackjackPic {
+	height: 450px;
+}
+
+#tokens{
+	text-shadow: 1px 1px 0 black, 
+                2px 2px 0 black;
+	position: fixed;
+	color: orangered;
+	font-size: 280%;
+	font-family: 'Francois One', sans-serif;
+}

@@ -1,0 +1,69 @@
+<!-- Joshua Bailey
+	10-24-2021
+	CSC 499 002
+	Fall 2021
+	Project #1 -->
+
+<!DOCTYPE html>
+<html>
+	<!-- HEAD TAG: contains info about the html document -->
+	<head>
+		<!-- META TAG: gives the browsers info about the document -->
+		<meta charset="UTF-8">
+		<meta name="Project 1" content="Project 1">
+		<link rel="stylesheet" type="text/css" href="./slots.css"/>
+		<link href="http://fonts.cdnfonts.com/css/casino" rel="stylesheet">
+		<link href="http://fonts.cdnfonts.com/css/florida-project" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+		<link href="http://fonts.cdnfonts.com/css/sportsball" rel="stylesheet">
+		<link href="http://fonts.cdnfonts.com/css/gsubadaslowly" rel="stylesheet">
+		<!-- TITLE TAG: names the webpage in the browser's tab -->
+		<title>Project 1</title>
+	</head>
+	<body>
+		<style>
+			@import url('http://fonts.cdnfonts.com/css/casino');
+			@import url('http://fonts.cdnfonts.com/css/florida-project');
+			@import url('http://fonts.cdnfonts.com/css/sportsball');
+			@import url('http://fonts.cdnfonts.com/css/gsubadaslowly');
+			@import url('https://fonts.googleapis.com/css2?family=Anton&family=Francois+One&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+		</style>
+
+		<div id="header">
+			<a href="../p1.html">
+				<img id="back" src="./backButton.png"/>
+			</a>
+			<h1>Welcome to the Slot Machine</h1>
+		</div>
+
+		<div id="container">
+			<div id="cost_and_tokens">
+				<h2>Cost to play: 1 Token</h2>
+				<h3>Tokens Remaining: <p id="token_display"></p></h3>
+			</div>
+			<img id="emptySlots" src="./emptySlots.jfif"/>
+			<div id="results"></div>
+			<div id="payouts">
+				<p id="payoutsTitle">Payouts<p>
+				<ul id="payoutsList">
+					<li>3 Sevens: 25 Tokens</li>
+					<li>2 Sevens: 10 Tokens</li>
+					<li>1 Seven: Tokens Bet Refunded</li>
+					<li>3 Bells: 15 Tokens</li>
+					<li>2 Bells: 5 Tokens</li>
+					<li>3 of-a-kind of other symbols: 5 Tokens</li>
+				</ul>
+			</div>
+		</div>
+		<br/>
+		<input type="button" value="SPIN "id="play-btn">
+		<p id="slotResults"></p>
+		<input type="button" value="ADMIT YOU ARE A LOSER"id="loser-btn">
+		<script src="./slots.js"></script>
+	</body>
+</html>

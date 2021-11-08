@@ -1,0 +1,113 @@
+body {
+    background: red;
+}
+
+h1 {
+    text-shadow: 2px 2px 0 black, 
+                4px 4px 0 black;
+    font-family: 'Casino', sans-serif;
+    font-size: 380%;
+    text-align: center;
+    color: white;
+}
+
+#container{
+    position: relative;
+    width: auto;
+    height: 270px;
+
+}
+
+#header {
+    display: inline;
+}
+
+#back {
+    border:  5px solid black;
+    border-radius: 25px;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+}
+#emptySlots {
+    width: 550px;
+    height: 250px;
+    display: visible;
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+}
+
+#results {
+    position: relative;
+    left: 32%;
+    top: 25%;
+}
+
+#results img {
+    height: 150px;
+    width: 110px;
+    margin: 0px 80px 120px 0px;
+}
+
+#payouts {
+    background: rgba(252, 3, 53, 0.7);
+    position: absolute;
+    /*font-family: 'Florida Project Phase One', sans-serif;*/
+    font-size: 105%;
+    color: black;
+    right: 0%;
+    top: 0%;
+}
+
+#payoutsTitle {
+    font-family: 'Casino 3D', sans-serif;
+    font-size: 250%;
+}
+
+#payoutsList {
+    font-size: 190%;
+    font-family: 'Staatliches', cursive;
+}
+
+#play-btn {
+    margin-left: 660px;
+    margin-top: 20px;
+    background: #ffdd00;
+    color: red;
+    font-family: 'Casino Flat Shadow', sans-serif;
+    font-size: 400%;
+}
+
+#loser-btn {
+    margin-left: 420px;
+    margin-top: 20px;
+    background: #ffdd00;
+    color: red;
+    font-family: 'Gsubadaslowly', sans-serif;
+    font-size: 400%;
+}
+
+#cost_and_tokens {
+    text-shadow: 2px 2px 0 black, 
+                4px 4px 0 black;
+    position: fixed;
+    width: 29%;
+    height: 100%;
+    font-size: 165%;
+    color: #FFE700;
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-top: 10px;
+}
+
+#token_display{
+    display: inline;
+}
+
+#slotResults {
+    margin-top: 20px;
+    font-family: 'Sportsball', sans-serif;
+    font-size: 250%;
+    color: white;
+    position: fixed;
+}
