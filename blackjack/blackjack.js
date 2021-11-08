@@ -76,7 +76,7 @@ Queue.prototype.length = function () {return this.elements.length}
 // VARIABLES //
 ///////////////
 
-var DEBUG = true
+var DEBUG = false
 
 const hitBtn = document.getElementById("hit-btn")
 const stayBtn = document.getElementById("stay-btn")
