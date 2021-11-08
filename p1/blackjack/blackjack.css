@@ -62,6 +62,7 @@ h1 {
 	height: 1px;
 	margin: 2%;
 	font-family: 'Courier Now', sans-serif;
+	font-size: 125%;
 }
 
 #player-hand img {
@@ -77,6 +78,7 @@ h1 {
 .tokekid {
 	display: inline-block;
 	font-family: 'Courier Now', sans-serif;
+	font-size: 200%;
 }
 
 .game-btns {
