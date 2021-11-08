@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Blackjack">
+		<link rel="stylesheet" type="text/css" href="./blackjack.css">
+
+		<title>Blackjack: Hit or Bust!</title>
+	</head>
+	<body>
+
+		<style> 
+			@import url('http://fonts.cdnfonts.com/css/courier-now');
+		</style>
+
+		<h1 class="header">BLACKJACK BABY!</h1>
+		<hr/>
+
+		<div id="dealer-hand"></div>
+
+		<div class="play">
+			Enter your bet here:<br/>
+			<input type="text" name="bet" id="bet" size="7px"><br/>
+			Minimum/default bet is 2 tokens<br/>
+			<button id="play-btn">Play!</button>
+		</div>
+
+		<br/><br/><br/>
+		<br/><br/><br/>
+
+		<div id="toke">
+			<h2 class="tokekid">Tokens available:</h2>
+			<h2 class="tokekid" id="wal"></h2>
+		</div>
+		<div class="game-btns">
+			<button id="hit-btn">Hit me!</button>
+			<button id="stay-btn">Stay!</button>
+		</div>
+		
+		<div id="player-hand"></div>
+
+		<script src="./blackjack.js"></script>
+	</body>
+</html>
