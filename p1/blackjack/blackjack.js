@@ -181,6 +181,9 @@ async function newGame(){
 	image3.src = q_img.dequeue()
 	playerHand.appendChild(image3)
 	await sleep(500)
+
+	hitBtn.style.visibility = "visible"
+	stayBtn.style.visibility = "visible"
 }
 
 function dealCard(score, scoreA, scoreJ){
@@ -214,6 +217,7 @@ function reset(){
 	playerHand.innerHTML = ""
 	dealerHand.innerHTML = ""
 	resetScores()
+	playBtn.style.visibility = "visible"
 }
 
 function resetScores(){
@@ -285,6 +289,9 @@ function winPayout(win){
 /////////////
 
 hitBtn.addEventListener("click", async function () {
+	hitBtn.style.visibility = "hidden"
+	stayBtn.style.visibility = "hidden"
+	await sleep(500)
 	playerScore += dealCard(playerScore, playerACount, playerJCount)
 	playerCardCount++
 	await sleep(500)
@@ -293,9 +300,14 @@ hitBtn.addEventListener("click", async function () {
 	playerHand.appendChild(image)
 	await sleep(500)
 	if (playerScore > 21){bust()}
+	hitBtn.style.visibility = "visible"
+	stayBtn.style.visibility = "visible"
 })
 
-stayBtn.addEventListener("click", function () {
+stayBtn.addEventListener("click", async function () {
+	hitBtn.style.visibility = "hidden"
+	stayBtn.style.visibility = "hidden"
+	await sleep(500)
 	dealerPlays()
 })
 
@@ -306,8 +318,6 @@ playBtn.addEventListener("click", async function () {
 		localStorage.setItem("tokens", 100)
 		myWallet.innerHTML = localStorage.getItem("tokens")
 	}
-
-	await sleep(500)
 	bet = myBet.value
 	if (myBet.value == "" || bet < 2){
 		bet = 2
@@ -319,6 +329,7 @@ playBtn.addEventListener("click", async function () {
 		myWallet.innerHTML = localStorage.getItem("tokens")
 	}
 	
+	playBtn.style.visibility = "hidden"
 	await sleep(500)
 	localStorage.setItem("tokens", localStorage.getItem("tokens") - bet)
 	myWallet.innerHTML = localStorage.getItem("tokens")
@@ -342,3 +353,9 @@ if (!globalNum){
 
 var bet = 0
 myWallet.innerHTML = localStorage.getItem("tokens")
+hitBtn.style.visibility = "hidden"
+stayBtn.style.visibility = "hidden"
+
+
+
+
