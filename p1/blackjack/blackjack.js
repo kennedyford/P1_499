@@ -233,7 +233,6 @@ function reset(){
 	dealerHand.innerHTML = ""
 	resetScores()
 	playBtn.style.visibility = "visible"
-	document.getElementById("bet").value = ''
 }
 
 // sets all of the score variables to zero
@@ -383,5 +382,3 @@ myWallet.innerHTML = localStorage.getItem("tokens")
 hitBtn.style.visibility = "hidden"
 stayBtn.style.visibility = "hidden"
 console.log(myBet.innerHTML)
-
-
