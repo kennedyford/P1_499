@@ -40,7 +40,7 @@ var tokens = localStorage.getItem("tokens")
 
 // If the 'tokens' item does not exist then initialize it with a value of 20
 if (!tokens){
-	localStorage.setItem("tokens", 20)
+	localStorage.setItem("tokens", 100)
 	tokenDisplay.innerHTML = localStorage.getItem("tokens")
 }
 // If 'tokens' does exist but the player has run out of them then hide the play button 
@@ -239,7 +239,7 @@ async function blinkingResult() {
 function loser() {
 
 	// Resetting the tokens 
-	localStorage.setItem("tokens", 20)
+	localStorage.setItem("tokens", 100)
 	tokenDisplay.innerHTML = localStorage.getItem("tokens")
 
 	// Hiding the loser button and showing the spin button again
