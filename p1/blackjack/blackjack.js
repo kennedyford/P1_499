@@ -86,6 +86,13 @@ var playerHand = document.getElementById("player-hand")
 var myWallet = document.getElementById("wal")
 var myBet = document.getElementById("bet")
 
+var five = document.getElementById("5")
+var ten = document.getElementById("10")
+var twenty = document.getElementById("20")
+var twentyFive = document.getElementById("25")
+var fifty = document.getElementById("50")
+var oneHundred = document.getElementById("100")
+
 var playerScore = 0
 var playerCardCount = 0
 var playerACount = 0
@@ -309,6 +316,19 @@ function winPayout(win){
 	}
 }
 
+function checkBet() {
+	if (five.checked == true){return 5}
+	else if (ten.checked == true){return 10}
+	else if (twenty.checked == true){return 20}
+	else if (twentyFive.checked == true){return 25}
+	else if (fifty.checked == true){return 50}
+	else if (oneHundred.checked == true){return 100}
+	else{
+		alert("You must select a valid bet!")
+		window.location.reload()
+	}
+}
+
 
 /////////////
 // BUTTONS //
@@ -344,15 +364,12 @@ playBtn.addEventListener("click", async function () {
 		localStorage.setItem("tokens", 100)
 		myWallet.innerHTML = localStorage.getItem("tokens")
 	}
-	bet = myBet.value
-	if (myBet.value == "" || bet < 2){
-		bet = 2
-	}
+
+	bet = checkBet()
 
 	if (localStorage.getItem("tokens") < bet){
-		alert("You don't have that many tokens! Your bet has been reduced to your current token capacity.")
-		bet = localStorage.getItem("tokens")
-		myWallet.innerHTML = localStorage.getItem("tokens")
+		alert("You don't have that many tokens!")
+		window.location.reload()
 	}
 	
 	playBtn.style.visibility = "hidden"
@@ -361,7 +378,6 @@ playBtn.addEventListener("click", async function () {
 	myWallet.innerHTML = localStorage.getItem("tokens")
 	setup()
 })
-
 
 //////////
 // MAIN //
@@ -381,4 +397,3 @@ var bet = 0
 myWallet.innerHTML = localStorage.getItem("tokens")
 hitBtn.style.visibility = "hidden"
 stayBtn.style.visibility = "hidden"
-console.log(myBet.innerHTML)
