@@ -42,27 +42,21 @@ h1 {
 	margin: 1%;
 }
 
-#bet {
-	text-align: center;
-	background: forestgreen;
-	color: white;
-	font-family: 'Courier Now', sans-serif;
-}
-
 #play-btn {
 	background: blue;
 	padding: 10px;
 	margin: 5px;
 	width: 100px;
 	height: 50px;
-	font-family: 'Courier Now', sans-serif;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 90%;
 }
 
 .play {
 	height: 1px;
-	margin: 2%;
-	font-family: 'Courier Now', sans-serif;
+	margin: 3%;
 	font-size: 125%;
+	font-family: 'Bebas Neue', cursive;
 }
 
 #player-hand img {
@@ -77,8 +71,8 @@ h1 {
 
 .tokekid {
 	display: inline-block;
-	font-family: 'Courier Now', sans-serif;
 	font-size: 200%;
+	font-family: 'Bebas Neue', cursive;
 }
 
 .game-btns {
@@ -92,7 +86,8 @@ h1 {
 	margin: 5px;
 	width: 100px;
 	height: 50px;
-	font-family: 'Courier Now', sans-serif;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 90%;
 }
 
 #stay-btn {
@@ -101,7 +96,8 @@ h1 {
 	margin: 5px;
 	width: 100px;
 	height: 50px;
-	font-family: 'Courier Now', sans-serif;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 90%;
 }
 
 #player-hand {

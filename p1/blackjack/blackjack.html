@@ -1,3 +1,11 @@
+<!-- 
+Kennedy Ford
+10-23-2021
+CSC 499-002
+Fall 2021
+Project #1 
+-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,13 +13,13 @@
 		<meta name="description" content="Blackjack">
 		<link rel="stylesheet" type="text/css" href="./blackjack.css">
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 		<title>Blackjack: Hit or Bust!</title>
 	</head>
 	<body>
-
-		<style> 
-			@import url('http://fonts.cdnfonts.com/css/courier-now');
-		</style>
 		<div class="header">
 			<a href="../p1.html"><img id="back" src="./backButton.png"></a>
 			<h1>BLACKJACK BABY!</h1>
@@ -22,9 +30,12 @@
 		<div id="dealer-hand"></div>
 
 		<div class="play">
-			Enter your bet here:<br/>
-			<input type="text" name="bet" id="bet" size="7px"><br/>
-			Minimum/default bet is 2 tokens<br/>
+			<input type="radio" name="radio" id="5" value="5"> 5 tokens
+			<input type="radio" name="radio" id="10" value="10"> 10 tokens
+			<input type="radio" name="radio" id="20" value="20"> 20 tokens
+			<input type="radio" name="radio" id="25" value="25"> 25 tokens
+			<input type="radio" name="radio" id="50" value="50"> 50 tokens
+			<input type="radio" name="radio" id="100" value="100"> 100 tokens<br/>
 			<button id="play-btn">Play!</button>
 		</div>
 
