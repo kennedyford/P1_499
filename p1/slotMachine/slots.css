@@ -1,3 +1,12 @@
+@import url('http://fonts.cdnfonts.com/css/casino');
+@import url('http://fonts.cdnfonts.com/css/florida-project');
+@import url('http://fonts.cdnfonts.com/css/sportsball');
+@import url('http://fonts.cdnfonts.com/css/gsubadaslowly');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Francois+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 body {
     background: red;
 }
@@ -62,7 +71,7 @@ h1 {
 
 #payoutsTitle {
     font-family: 'Casino 3D', sans-serif;
-    font-size: 250%;
+    font-size: 300%;
 }
 
 #payoutsList {
@@ -91,7 +100,7 @@ h1 {
 #cost_and_tokens {
     text-shadow: 2px 2px 0 black, 
                 4px 4px 0 black;
-    position: fixed;
+    position: absolute;
     width: 29%;
     height: 100%;
     font-size: 165%;
@@ -109,5 +118,5 @@ h1 {
     font-family: 'Sportsball', sans-serif;
     font-size: 250%;
     color: white;
-    position: fixed;
+    position: absolute;
 }
