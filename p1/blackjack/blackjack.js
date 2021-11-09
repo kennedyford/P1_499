@@ -112,8 +112,10 @@ spades_j, spades_q, spades_k, spades_a
 // FUNCTIONS //
 ///////////////
 
+// sleeps for the given number of milliseconds
 function sleep(ms){return new Promise(resolve => setTimeout(resolve, ms))}
 
+// creates a psuedo deck using 4 sets of the numbers 2-14 for 2-A and returns it
 function createDeck(){
 	let cards = []
 	var k = 0;
@@ -126,6 +128,12 @@ function createDeck(){
 	return cards
 }
 
+/* 
+randomly enqueues both the number representations of the cards created
+in the createDeck() method and the png images that will be shown. Each
+card will only be enqueue's once and it will run until the entire range
+of the original array have been used 
+*/
 function shuffleDeck(deck){
 	let usedIndex = []
 
@@ -139,6 +147,7 @@ function shuffleDeck(deck){
 	}
 }
 
+// checked to see if the given random number is in the usedIndex array
 function isUsedIndex(usedIndex, rand){
 	for (var i = 0; i < usedIndex.length; i++){
 		if (usedIndex[i] == rand){return true}
@@ -146,6 +155,7 @@ function isUsedIndex(usedIndex, rand){
 	return false
 }
 
+// the dealer draws a card until their score is 17 or more
 async function dealerPlays(){
 	dealerScore += dealCard(dealerScore, dealerACount, dealerJCount)
 	await sleep(500)
@@ -157,6 +167,7 @@ async function dealerPlays(){
 	else {compareScores()}
 }
 
+// begins a new game by dealing two cards to the player and one to the dealer
 async function newGame(){
 	playerScore += dealCard(playerScore, playerACount, playerJCount)
 	playerCardCount++
@@ -186,6 +197,7 @@ async function newGame(){
 	stayBtn.style.visibility = "visible"
 }
 
+// dequeues a card, determines it numerical score value, and returns it.
 function dealCard(score, scoreA, scoreJ){
 	var card = q.dequeue()
 	if (card == 11){scoreJ++}
@@ -194,6 +206,7 @@ function dealCard(score, scoreA, scoreJ){
 	return cardVal
 }
 
+// determines the value of a given card
 function cardValue(card, score){
 	if (2 <= card && card <= 10){return card}
 	else if (11 <= card && card <= 13){return 10}
@@ -203,6 +216,7 @@ function cardValue(card, score){
 	}
 }
 
+// sets the game up by emptying the previously used queues and creating a new deck
 function setup(){
 	while(!q.isEmpty()){q.dequeue()}
 	while(!q_img.isEmpty()){q_img.dequeue()}
@@ -211,6 +225,7 @@ function setup(){
 	newGame()
 }
 
+// resets the game to its original appearance
 function reset(){
 	while(!q.isEmpty()){q.dequeue()}
 	while(!q_img.isEmpty()){q_img.dequeue()}
@@ -218,8 +233,10 @@ function reset(){
 	dealerHand.innerHTML = ""
 	resetScores()
 	playBtn.style.visibility = "visible"
+	myBet.value = ""
 }
 
+// sets all of the score variables to zero
 function resetScores(){
 	playerScore = 0
 	playerCardCount = 0
@@ -232,6 +249,8 @@ function resetScores(){
 	dealerJCount = 0
 }
 
+// compares the scores of both the player and the dealer after
+// they have both played and determines the winner.
 function compareScores(){
 	if (dealerScore > 21 || dealerScore < playerScore){playerWins()}
 	else if (dealerScore > playerScore){dealerWins()}
@@ -243,8 +262,14 @@ function compareScores(){
 	}
 }
 
+// determines whether the player or the dealer have a Blackjack and returns a boolean value
 function isPlayerBlackjack(){return (playerCardCount == 2 && playerACount == 1 && playerJCount == 1) ? true : false}
 function isDealerBlackjack(){return (dealerCardCount == 2 && dealerACount == 1 && dealerJCount == 1) ? true : false}
+
+
+////////////////////////
+// WIN/LOSE FUNCTIONS //
+////////////////////////
 
 async function playerWins(){
 	await sleep(500)
@@ -272,6 +297,8 @@ async function tie(){
 	reset()
 }
 
+
+// if the player wins or ties with the dealer, the appropriate tokens are given/returned.
 function winPayout(win){
 	if (win == 1){
 		localStorage.setItem("tokens", Number(localStorage.getItem("tokens")) + Math.ceil(bet * 1.5))
@@ -355,7 +382,5 @@ var bet = 0
 myWallet.innerHTML = localStorage.getItem("tokens")
 hitBtn.style.visibility = "hidden"
 stayBtn.style.visibility = "hidden"
-
-
 
 
