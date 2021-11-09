@@ -382,5 +382,6 @@ var bet = 0
 myWallet.innerHTML = localStorage.getItem("tokens")
 hitBtn.style.visibility = "hidden"
 stayBtn.style.visibility = "hidden"
+console.log(myBet.innerHTML)
 
 
